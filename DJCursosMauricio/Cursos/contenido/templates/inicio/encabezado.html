@@ -1,0 +1,36 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>{%block titulo%}Plantilla{%endblock%}</title>
+    <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<div class="back"></div>
+<nav>
+  <a href="{%url 'Principal'%}">Inicio</a>
+  <a href="{%url 'Cursos'%}">Cursos</a>
+  <a href="{%url 'Comentario'%}">Agregar Comentario</a>
+  <a href="{%url 'ConsultaContacto'%}">Ver Comentario</a>
+  <a href="{%url 'Contacto'%}">Agregar Contacto</a>
+  <a href="{%url 'ConsultaSQL'%}">Ver Contacto</a>
+</nav>
+<br><br>
+
+
+<br><br>
+
+
+{%block contenido%}
+
+
+
+
+{%endblock%}
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+

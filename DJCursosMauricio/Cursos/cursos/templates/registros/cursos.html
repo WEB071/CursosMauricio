@@ -1,0 +1,34 @@
+{% extends 'inicio/encabezado.html' %} {% block titulo %} Cursos {% endblock %} {% comment %} Contenido Cursos {% endcomment %} {% block contenido %}
+
+    
+        <table class="table table-striped m-5">
+            <thead>
+                <tr>
+                    <th>Logo</th>
+                    <th>Nombre del Curso</th>
+                    <th>Alumnos Registrados</th>
+                    <th>Descripcion</th>
+                    <th>Fecha de Inicio</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                {% for curso in cursos %}
+                <tr>
+                    <td class="text-center ">
+                        <image src="{{curso.imagen.url }} " alt="{{ curso.nombre }} " class="img-fluid " width="100 ">
+                    </td>
+                    <td>{{ curso.NombreCurso }}</td>
+                    <td>{{ curso.AlumnosRegistrados }}</td>
+                    <td>{{ curso.Descripcion }}</td>
+                    <td>{{ curso.FechaInicio }}</td>
+                </tr>
+                {% endfor %}
+
+        </table>
+    </div>
+</div>
+<br><br><br><br><br><br><br><br><br><br>
+
+
+{% endblock%}

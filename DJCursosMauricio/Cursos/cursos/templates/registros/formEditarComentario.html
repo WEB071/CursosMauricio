@@ -1,0 +1,16 @@
+{% extends 'inicio/encabezado.html' %} {% block titulo %} Cursos {% endblock %} {% comment %} Contenido Cursos {% endcomment %} {% block contenido %}
+<br><br>
+
+
+
+<div class="card m-5">
+
+<form class="form-horizontal" action="{% url 'Editar' comentario.id%}" method="POST" role="form">
+{% csrf_token %}
+    <div class="form-group m-3">
+<label for="exampleInputEmail1">Nombre</label><input type="text" class="form-control" name="usuario" aria-describedby="emailHelp" value={{comentario.usuario}}></div>
+  <div class="form-group m-3">
+    <label for="exampleFormControlTextarea1">Mensaje</label><textarea class="form-control" name="mensaje" rows="3">{{comentario.mensaje}}</textarea></div><button type="submit" class="btn btn-primary m-3" value="Enviar">Enviar</button>
+</form>
+</div>
+{% endblock %}

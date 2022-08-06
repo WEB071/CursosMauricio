@@ -1,0 +1,33 @@
+{% extends 'inicio/encabezado.html' %} {% block titulo %} Cursos {% endblock %} {% comment %} Contenido Cursos {% endcomment %} {% block contenido %}
+<br><br>
+
+
+
+<div class="card m-5">
+{% for archivo in archivos  %}
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>email</th>
+            <th>telefono</th>
+            <th>mensaje</th>
+            <th>archivo</th>
+        </tr>
+    </thead>
+    <tr>
+        <td>{{ archivo.nombre }}</td>
+        <td>{{ archivo.email }}</td>
+        <td>{{ archivo.telefono }}</td>
+        <td>{{ archivo.mensaje }}</td>
+        <td><img src="{{ archivo.archivo.url }}" width="250"></td>
+    </tr>
+
+
+</table>
+
+{% endfor %}
+</div>
+
+
+{% endblock%}

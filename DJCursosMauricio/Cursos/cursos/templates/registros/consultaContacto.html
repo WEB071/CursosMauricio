@@ -1,0 +1,40 @@
+{% extends 'inicio/encabezado.html' %} {% block titulo %} Cursos {% endblock %} {% comment %} Contenido Cursos {% endcomment %} {% block contenido %}
+<br><br>
+
+
+    <div class="card">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Usuario</th>
+                    <th>Mensaje</th>
+                    <th></th>
+                    <th></th>
+                    
+                   
+
+                </tr>
+            </thead>
+            <tbody>
+                {% for comentario in comentarios %}
+                <tr>
+                
+                    <td>{{ comentario.usuario }}</td>
+                    <td>{{ comentario.mensaje }}</td>
+                    <td>
+                        
+                        <a href="{%url 'ConsultaIndividual' comentario.id%}">Editar</a>
+                        </td>
+                    <td>
+                        <a href="{%url 'Eliminar' comentario.id%}">Eliminar</a>
+                        </td>
+                </tr>
+                {% endfor %}
+
+        </table>
+    </div>
+</div>
+
+<br><br><br><br><br><br><br><br><br>
+
+{% endblock%}

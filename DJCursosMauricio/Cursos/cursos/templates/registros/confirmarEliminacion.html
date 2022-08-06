@@ -1,0 +1,21 @@
+{% extends 'inicio/encabezado.html' %} {% block titulo %} Contacto {% endblock %}
+{% comment %} Contenido de Contacto {% endcomment %}
+{% block contenido %}
+<br><br>
+
+<form method="POST">
+{% csrf_token %}
+
+<div class="card m-5">
+    <p class="card-text">
+           <center>¿Desea Eliminar el Comentario?</center> 
+    </p>
+<div class="callout callout-danger fade in">
+¿Estas seguro de que deseas <strong>Eliminar</strong> el
+comentario seleccionado?.
+</div>
+<button type="submit" class="btn btn-danger m-3">Si</button>
+<a href="{%url 'ConsultaContacto'%}" class="btn btn-primary m-3">Cancelar</a>
+</form>
+</div>
+{% endblock %}
